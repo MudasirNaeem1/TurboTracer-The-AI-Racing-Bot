@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Project</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div id="mainDiv">
+
+    <div id="gameDiv">
+
+      <canvas id="gameCanvas"></canvas>
+      <div id="detailsDiv"></div>
+
+    </div>
+
+    <div id="menuDiv">
+
+      <form>
+
+        <label for="popSize">Population Size :</label>
+        <input type="number" name="popSize" id="popSize" min="100" onchange=enforceMinMax(this)>
+        <label for="cSpeed">Car Speed :</label>
+        <input id="speedOption" type="range" list="speedOptions" step="1" min="5" max="10">
+
+        <datalist id="speedOptions">
+          <option value="5">
+          <option value="6">
+          <option value="7">
+          <option value="8">
+          <option value="9">
+          <option value="10">
+        </datalist>
+
+        <label for="cRotationAngle">Car Rotation Angle :</label>
+        <input id="angleOption" type="range" list="angleOptions" step="1" min="5" max="10">
+
+        <datalist id="angleOptions">
+          <option value="5">
+          <option value="6">
+          <option value="7">
+          <option value="8">
+          <option value="9">
+          <option value="10">
+        </datalist>
+
+        <label for="noEliteCars">Number Of Elite Cars :</label>
+        <input type="number" name="noEliteCars" id="noEliteCars" min="0" max="100" onchange=enforceMinMax(this)>
+        <label for="difficultyLevel">Difficulty Level :</label>
+
+        <div>
+
+          <input class="rdInput" type="radio" name="difficultyLevel" id="easyDifficulty" value="1">
+          <label class="rdLabel" for="easyDifficulty">Easy</label>
+
+        </div>
+
+        <div>
+
+          <input class="rdInput" type="radio" name="difficultyLevel" id="mediumDifficulty" value="2">
+          <label class="rdLabel" for="mediumDifficulty">Medium</label>
+
+        </div>
+
+        <div>
+
+          <input class="rdInput" type="radio" name="difficultyLevel" id="hardDifficulty" value="3">
+          <label class="rdLabel" for="hardDifficulty">Hard</label>
+
+        </div>
+
+      </form>
+
+      <button onclick="startSimulation()">Simulate</button>
+      <button id="playButton" onclick="playWithBestCar()">Play</button>
+
+    </div>
+
+  </div>
+
+</body>
+
+<script src="app.js"></script>
+
+</html>

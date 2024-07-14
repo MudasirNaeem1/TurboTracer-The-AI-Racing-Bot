@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#mainDiv {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+#gameDiv {
+  width: 80%;
+  height: 100%;
+  display: block;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 80%;
+  border: 10px solid blue;
+  display: block;
+}
+
+#detailsDiv {
+  width: 100%;
+  height: 20%;
+  border: 10px solid blue;
+  display: block;
+}
+
+#menuDiv {
+  width: 20%;
+  height: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: 10px solid blue;
+  display: block;
+}
+
+label,
+input,
+button {
+  width: 100%;
+  display: block;
+  font-family: "Garamond", "Courier New", monospace;
+  font-size: 130%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: 1000;
+}
+
+div {
+  display: flex;
+}
+
+input {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.rdInput {
+  width: 20%;
+  padding: 0;
+}
+
+.rdLabel {
+  width: 80%;
+  text-align: center;
+}
